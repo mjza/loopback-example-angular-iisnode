@@ -384,24 +384,24 @@ server.start();
          <remove statusCode="403" subStatusCode="-1" />
          <remove statusCode="401" subStatusCode="-1" />
          <remove statusCode="400" />
-         <error statusCode="400" path="C:\Inetpub\vhosts\mjzsoft.com\error_docs\bad_request.html" />
+         <error statusCode="400" path="C:\Inetpub\vhosts\YOUR_USER_SAPCE\error_docs\bad_request.html" />
          <remove statusCode="407" />
-         <error statusCode="407" path="C:\Inetpub\vhosts\mjzsoft.com\error_docs\proxy_authentication_required.html" />
+         <error statusCode="407" path="C:\Inetpub\vhosts\YOUR_USER_SAPCE\error_docs\proxy_authentication_required.html" />
          <remove statusCode="414" />
-         <error statusCode="414" path="C:\Inetpub\vhosts\mjzsoft.com\error_docs\request-uri_too_long.html" />
+         <error statusCode="414" path="C:\Inetpub\vhosts\YOUR_USER_SAPCE\error_docs\request-uri_too_long.html" />
          <remove statusCode="415" />
-         <error statusCode="415" path="C:\Inetpub\vhosts\mjzsoft.com\error_docs\unsupported_media_type.html" />
+         <error statusCode="415" path="C:\Inetpub\vhosts\YOUR_USER_SAPCE\error_docs\unsupported_media_type.html" />
          <remove statusCode="503" />
-         <error statusCode="503" path="C:\Inetpub\vhosts\mjzsoft.com\error_docs\maintenance.html" />
-         <error statusCode="401" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\mjzsoft.com\error_docs\unauthorized.html" />
-         <error statusCode="403" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\mjzsoft.com\error_docs\forbidden.html" />
-         <error statusCode="404" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\mjzsoft.com\error_docs\not_found.html" />
-         <error statusCode="405" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\mjzsoft.com\error_docs\method_not_allowed.html" />
-         <error statusCode="406" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\mjzsoft.com\error_docs\not_acceptable.html" />
-         <error statusCode="412" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\mjzsoft.com\error_docs\precondition_failed.html" />
-         <error statusCode="500" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\mjzsoft.com\error_docs\internal_server_error.html" />
-         <error statusCode="501" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\mjzsoft.com\error_docs\not_implemented.html" />
-         <error statusCode="502" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\mjzsoft.com\error_docs\bad_gateway.html" />
+         <error statusCode="503" path="C:\Inetpub\vhosts\YOUR_USER_SAPCE\error_docs\maintenance.html" />
+         <error statusCode="401" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\YOUR_USER_SAPCE\error_docs\unauthorized.html" />
+         <error statusCode="403" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\YOUR_USER_SAPCE\error_docs\forbidden.html" />
+         <error statusCode="404" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\YOUR_USER_SAPCE\error_docs\not_found.html" />
+         <error statusCode="405" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\YOUR_USER_SAPCE\error_docs\method_not_allowed.html" />
+         <error statusCode="406" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\YOUR_USER_SAPCE\error_docs\not_acceptable.html" />
+         <error statusCode="412" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\YOUR_USER_SAPCE\error_docs\precondition_failed.html" />
+         <error statusCode="500" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\YOUR_USER_SAPCE\error_docs\internal_server_error.html" />
+         <error statusCode="501" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\YOUR_USER_SAPCE\error_docs\not_implemented.html" />
+         <error statusCode="502" prefixLanguageFilePath="" path="C:\Inetpub\vhosts\YOUR_USER_SAPCE\error_docs\bad_gateway.html" />
       </httpErrors>
       <!--End of Original part -->
       <!-- One more setting that can be modified is the path to the node.exe executable and the interceptor:-->
