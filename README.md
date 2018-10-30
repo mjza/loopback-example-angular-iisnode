@@ -3,7 +3,7 @@
 Loopback is a grate library. But if you want to use it inside a Windows host like Azur that have `iisnode` as their `Node.JS` engine, then you will be faced with so many problems. In this code which is a fork from offical [loopback-example-angular](https://github.com/strongloop/loopback-example-angular) I will try to show you how to run this example inside the windows host.
 My host controll panel is the `Pleks Onyx`. Also My explanation will be reflected after the offical read me text that explanes how to use this code in your local machin.
 
-# How to run offical `loopback-example-angular` in your local machine. 
+#A) How to run offical `loopback-example-angular` in your local machine. 
 
 ```
 $ git clone https://github.com/strongloop/loopback-example-angular.git
