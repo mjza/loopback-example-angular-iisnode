@@ -545,6 +545,11 @@ And now if you open your website you have to see something like this:
 
 ![Looklike of the page after changing the web.config file at the root folder.](./figures/15.JPG)
 
+You can download the modified `web.config` file from [this repository](https://github.com/mjza/loopback-example-angular-iisnode/blob/master/web.config). 
+
+**_ _But please note that you have to change `YOUR_USER_SAPCE` inside of the `web.config` file with your own user space name inside of your windows server host._ _** 
+
+
 
 ### Check POST requests
 
