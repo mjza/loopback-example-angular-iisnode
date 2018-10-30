@@ -200,6 +200,20 @@ I will illustrate from very bigining, this toturial is based on `Pleks Onyx` con
 
 ![Content of node_module after installation](./figures/10.JPG)
 
+![The error page that can be seen before fix.](./figures/11.JPG)
+
+![Content of start.js file](./figures/12.JPG)
+
+![Change the `Application start file address` and start the node.js again](./figures/13.JPG)
+
+![Looklike of the page after adding start.js file to the root folder.](./figures/14.JPG)
+
+![Looklike of the page after changing the web.config file at the root folder.](./figures/15.JPG)
+
+![Success REST POST request](./figures/16.JPG)
+
+![Success REST DELETE request](./figures/17.JPG)
+
 
 
 
