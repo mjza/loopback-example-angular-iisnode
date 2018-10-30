@@ -180,6 +180,29 @@ You don't need to fork or clone my code. Just keep it beside of your code for co
 
 I will illustrate from very bigining, this toturial is based on `Pleks Onyx` control panel, but the configuration can be used for any other iisnode like Microsoft Azur as well.
 
+![Create the website space](./figures/01.JPG)
+      
+![Initial files](./figures/02.JPG)
+
+![content of web.config file](./figures/03.JPG)
+
+![Delete redundant files](./figures/04.JPG)
+
+![Upload and extract files](./figures/05.JPG)
+
+![List of extracted files. Delete original zip file.](./figures/06.JPG)
+
+![Activate Node.js on the site.](./figures/07.JPG)
+
+![run NPM install on the site](./figures/08.JPG)
+
+![You must see the success message.](./figures/09.JPG)
+
+![Content of node_module after installation](./figures/10.JPG)
+
+
+
+
 
 
 
