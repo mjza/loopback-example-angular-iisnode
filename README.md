@@ -215,7 +215,7 @@ server.start();
 ![Looklike of the page after adding start.js file to the root folder.](./figures/14.JPG)
 
 ```xml
-//Old (Original) web.config
+<!-- Old (Original) web.config -->
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <system.webServer>
@@ -257,7 +257,7 @@ server.start();
 
 
 ```xml
-//Modified web.config
+<!-- Modified web.config -->
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
    <system.webServer>
