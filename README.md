@@ -169,3 +169,17 @@ to view the application.
 ---
 
 [More LoopBack examples](https://loopback.io/doc/en/lb3/Tutorials-and-examples.html)
+
+---
+
+# B) How to deploy `loopback-example-angular` to our remote production host which has `iisnode`???
+
+Uptil now what ever you red was original text from the official `loopback-example-angular` example code. From now I will try to explain how to deploy this code to a remote host for your end users.
+
+You don't need to fork or clone my code. Just keep it beside of your code for comparision. 
+
+I will illustrate from very bigining, this toturial is based on `Pleks Onyx` control panel, but the configuration can be used for any other iisnode like Microsoft Azur as well.
+
+
+
+
