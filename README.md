@@ -172,37 +172,106 @@ to view the application.
 
 ---
 
-# B) How to deploy `loopback-example-angular` to our remote production host which has `iisnode`???
+# B) How to deploy `loopback-example-angular` to our remote production host with `iisnode`
 
-Uptil now what ever you red was original text from the official `loopback-example-angular` example code. From now I will try to explain how to deploy this code to a remote host for your end users.
+Uptil now whatever you red was original text from the official `loopback-example-angular` example code. From now I will try to explain how to deploy this code to a remote host for your end users.
 
 You don't need to fork or clone my code. Just keep it beside of your code for comparision. 
 
-I will illustrate from very bigining, this toturial is based on `Pleks Onyx` control panel, but the configuration can be used for any other iisnode like Microsoft Azur as well.
+I will illustrate from very bigining steps. This toturial is based on `Pleks Onyx` control panel, but the configuration can be used for any other `iisnode` hosts like Microsoft Azur as well.
+
+### Creation of website space 
+
+First create your website space inside your Pleks control panel. I assumed the name of your website is `example.com`
 
 ![Create the website space](./figures/01.JPG)
+
+### Initial files
+
+If you browse your newly created website inside the file explorer you will probebly see a list of initial files. The most important file here is `web.config`. The rest files are redundant for our usecase. Actually this file is the place that define the behaviour of `iisnode`. I would like to call it source of disaster. We will fix the problems of this file later. 
       
 ![Initial files](./figures/02.JPG)
 
-![content of web.config file](./figures/03.JPG)
+### Content of the original `web.config` file
+
+If you open the `web.config` file you mostly see something like the following. 
+
+![Content of web.config file](./figures/03.JPG)
+
+### Delete redundant files
+
+Just keep the `web.config` file. We will modify the content of this file later. If you don't have this file don't worry. We will create one later.
 
 ![Delete redundant files](./figures/04.JPG)
 
+### Upload and extract `loopback-example-angular` file
+
+Please download the `loopback-example-angular-master.zip` file from the following url and upload it to your website folder in your remote host.
+
+[https://github.com/strongloop/loopback-example-angular](https://github.com/strongloop/loopback-example-angular)
+
+Also after upload extract the zip file, then you have to have a folder that contains the files.
+
 ![Upload and extract files](./figures/05.JPG)
 
-![List of extracted files. Delete original zip file.](./figures/06.JPG)
+### List of the extracted files.
+
+Move the extracted files from the `loopback-example-angular-master` folder to the root and delete original zip file as well as its coresponding folder. 
+
+![List of the extracted files. Delete original zip file.](./figures/06.JPG)
+
+### Activate Node.js on the site.
+
+Go back to your site controll area and update the `Application Startup File` to the `server\server.js` and press the `Enable Node.js` button.
 
 ![Activate Node.js on the site.](./figures/07.JPG)
 
-![run NPM install on the site](./figures/08.JPG)
+### Run `NPM install` on the site
+
+Press the `NPM install` button to run the `npm install` command. It will install necessary libraries based on `package.json`.
+
+![Run NPM install on the site](./figures/08.JPG)
+
+### Wait for success message
+
+Please wait until all libraries install successfully. 
 
 ![You must see the success message.](./figures/09.JPG)
 
+### Content of `node_module` folder after installation
+
+After a successful installation, a new folder with name `node_module` has been created on the root folder and has all the required libraries. 
+
 ![Content of node_module after installation](./figures/10.JPG)
+
+### Check your website in your browser
+
+Now if you check your browser mostly you will see an error page like the following figure.
 
 ![The error page that can be seen before fix.](./figures/11.JPG)
 
+The content fo the error reflected here as well. 
+
+````
+iisnode encountered an error when processing the request.
+
+HRESULT: 0x2
+HTTP status: 500
+HTTP subStatus: 1002
+HTTP reason: Internal Server Error
+You are receiving this HTTP 200 response because system.webServer/iisnode/@devErrorsEnabled configuration setting is 'true'.
+
+In addition to the log of stdout and stderr of the node.exe process, consider using debugging and ETW traces to further diagnose the problem.
+
+The node.exe process has not written any information to stderr or iisnode was unable to capture this information. Frequent reason is that the iisnode module is unable to create a log file to capture stdout and stderr output from node.exe. Please check that the identity of the IIS application pool running the node.js application has read and write access permissions to the directory on the server where the node.js application is located. Alternatively you can disable logging by setting system.webServer/iisnode/@loggingEnabled element of web.config to 'false'.
+
+````
+
+###
+
 ![Content of start.js file](./figures/12.JPG)
+
+###
 
 ![Change the `Application start file address` and start the node.js again](./figures/13.JPG)
 
@@ -211,6 +280,8 @@ I will illustrate from very bigining, this toturial is based on `Pleks Onyx` con
 var server = require('./server/server.js');
 server.start();
 ```
+
+###
 
 ![Looklike of the page after adding start.js file to the root folder.](./figures/14.JPG)
 
@@ -445,9 +516,16 @@ server.start();
 </configuration>
 ```
 
+###
+
 ![Looklike of the page after changing the web.config file at the root folder.](./figures/15.JPG)
 
+
+###
+
 ![Success REST POST request](./figures/16.JPG)
+
+###
 
 ![Success REST DELETE request](./figures/17.JPG)
 
