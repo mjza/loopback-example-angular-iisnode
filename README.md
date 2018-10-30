@@ -267,13 +267,9 @@ The node.exe process has not written any information to stderr or iisnode was un
 
 ````
 
-###
+### Create a new file as `start.js`
 
-![Content of start.js file](./figures/12.JPG)
-
-###
-
-![Change the `Application start file address` and start the node.js again](./figures/13.JPG)
+One of the problems regarding running loopback under the iisnode is that it needs to have an app file inside of the root folder. We will create a file in root folder name it `start.js` and copy the following code inside of that. 
 
 ```javascript
 //start.js
@@ -281,9 +277,31 @@ var server = require('./server/server.js');
 server.start();
 ```
 
-###
+This file is responsible to run the `server.js`. 
+
+![Content of start.js file](./figures/12.JPG)
+
+If you need more information please check the following link.
+
+[https://github.com/masonkmeyer/loopback-azure](https://github.com/masonkmeyer/loopback-azure)
+
+### Change the `Application Start File`
+
+By creating this new file it is the time to update `Application Start File` address inside website controll panel. For this go to the Node.js configuration page. Press `Disable Node.js` button first. Edit the `Application Start File` like the following figure. And press the `Enable Node.js` again. 
+
+![Change the `Application start file address` and start the node.js again](./figures/13.JPG)
+
+
+### Visit your website again
+
+Now it is the time to check the website again. If you check it you will see a white page with a link inside that says 'LoopBack Angular example'. If you open the console you will see a list of css and js files that failed to load. What is the reason?
 
 ![Looklike of the page after adding start.js file to the root folder.](./figures/14.JPG)
+
+
+### Fix the `web.config`
+
+Do you remember the `web.config`, it is the time to modify this file and fix the loading problem. In the following once again you can see the content of the original `web.config` file.  
 
 ```xml
 <!-- Old (Original) web.config -->
@@ -325,10 +343,17 @@ server.start();
 
 ```
 
+Thanks to the following 2 posts I reached the following `web.config` file that can solve the issue of running loopback examples inside of the iisnode and any windows server hosts like Azur. 
 
+[https://stackoverflow.com/questions/15979904/iis-node-js-and-web-application-with-iisnode-not-configured-right-with-virtual/31482232#31482232](https://stackoverflow.com/questions/15979904/iis-node-js-and-web-application-with-iisnode-not-configured-right-with-virtual/31482232#31482232)
+
+[https://stackoverflow.com/questions/9904897/iisnode-iis7-5-405-method-not-allowed-when-performing-put-request](https://stackoverflow.com/questions/9904897/iisnode-iis7-5-405-method-not-allowed-when-performing-put-request)
+
+I don't want to copy their explanations regarding the codes of following `web.config` file. Please check the above two links and the comments inside the codes yourself to understand what are the usage of each line of the codes.  
 
 ```xml
 <!-- Modified web.config -->
+<!-- Source: https://gist.github.com/pbaio/f63918181d8d7f8ee1d2 -->
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
    <system.webServer>
@@ -516,16 +541,20 @@ server.start();
 </configuration>
 ```
 
-###
+And now if you open your website you have to see something like this:
 
 ![Looklike of the page after changing the web.config file at the root folder.](./figures/15.JPG)
 
 
-###
+### Check POST requests
+
+If you try to add a `TODO` comment it most be sent via POST request and can be seen inside the Network tab of your browser developer tools. 
 
 ![Success REST POST request](./figures/16.JPG)
 
-###
+### Check DELETE requests
+
+If you try to delete a `TODO` comment it most be sent via DELETE request and can be seen inside the Network tab of your browser developer tools. 
 
 ![Success REST DELETE request](./figures/17.JPG)
 
